@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace NamnSpel
-{
-    
-}
+Logic.Start();
+Console.ReadLine();
+
+
+
