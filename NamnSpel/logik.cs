@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class Logic{
 public static string [] names = {"Bowser", "Doctor Robotnik", "King Krool", "Dr Wily", "Sephiroth", "Ganon", "Captain LeChuck", "Alice", "Maja", "Vera", "Alma", "Selma", "Gustafsson", "Svensson", "Johansson", "Noah", "William", "Liam", "Hugo", "Lucas"};
@@ -8,13 +9,25 @@ public static string [] names = {"Bowser", "Doctor Robotnik", "King Krool", "Dr 
     public static void DoingStuff (){
         int nameLength;
         bool check = true;
+
+        List<string> queList = new List<string>();
+
+        //chekar input och aryen 
         while(check == true){
             if(int.TryParse(System.Console.ReadLine(), out nameLength) == true){
                 if(nameLength > 3 && nameLength < 10){
-                    System.Console.WriteLine("ye");
+                    for(int i = 0;i < names.Length;i++){
+                        if(names[i].Length == nameLength){
+                            queList.Add(names[i]);
+                        }
+                    }
+                    check = false;
                 }
             }
         }
+
+        //random från listan
+
     }
 
 
