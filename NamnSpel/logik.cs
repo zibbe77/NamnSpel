@@ -42,11 +42,11 @@ public class Logic
         }
 
         //random från listan
-        foreach (string name in queList) { System.Console.WriteLine($"!!debug!!{name}"); }
+        //foreach (string name in queList) { System.Console.WriteLine($"!!debug!!{name}"); }
         Random generator = new Random();
         int r = generator.Next(queList.Count);
         System.Console.WriteLine($"Du fick nament {queList[r]}.");
-        System.Console.WriteLine("Click enter to continue");
+        System.Console.WriteLine("klicka enter för att forsäta");
     }
 
     public static void Cleanstuff()
