@@ -1,6 +1,11 @@
 ﻿using System;
+bool Answer = true;
 
-Logic.Cleanstuff();
-Logic.Start();
-Logic.DoingStuff();
-Console.ReadLine();
+while (Answer == true)
+{
+    Logic.Cleanstuff();
+    Logic.Start();
+    Logic.DoingStuff();
+    Console.ReadLine();
+    Answer = Logic.PlayAgain();
+}
