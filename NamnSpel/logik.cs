@@ -60,27 +60,24 @@ public class Logic
 
     public static bool PlayAgain()
     {
-        Cleanstuff();
         bool playAgain = false;
-        System.Console.WriteLine("Vill du köra igen?");
-        System.Console.WriteLine("Skriv Ja eller Nej");
-        string input = Console.ReadLine();
-
-        bool Answer = false;
-        while (Answer == false)
+        bool answer = false;
+        while (answer == false)
         {
             Cleanstuff();
+            System.Console.WriteLine("Vill du köra igen? (Vid nej stängs spelet)");
             System.Console.WriteLine("Skriv Ja eller Nej");
+            string input = Console.ReadLine();
 
             if (input == "ja" || input == "Ja" || input == "JA")
             {
                 playAgain = true;
-                Answer = true;
+                answer = true;
             }
             else if (input == "nej" || input == "Nej" || input == "NEJ")
             {
                 playAgain = false;
-                Answer = true;
+                answer = true;
             }
         }
         return playAgain;
